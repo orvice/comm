@@ -21,7 +21,7 @@
     <![endif]-->
 
 
-    <title>Login</title>
+    <title>用户登录</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -34,22 +34,26 @@
         <div class="login-screen">
           <div class="login-icon">
             <img src="../images/login/icon.png" alt="Welcome to Mail App" />
-            <h4>欢迎使用 <small>保修系统</small></h4>
+            <h4>欢迎使用 <small>报修系统</small></h4>
           </div>
 
           <div class="login-form">
             <div class="form-group">
-              <input type="text" class="form-control login-field" value="" placeholder="输入用户名" id="login-name" />
+               
+
+               <asp:TextBox class="form-control login-field" value="" placeholder="输入用户名"  ID="username" runat="server"></asp:TextBox></p>
               <label class="login-field-icon fui-user" for="login-name"></label>
             </div>
 
             <div class="form-group">
-              <input type="password" class="form-control login-field" value="" placeholder="输入密码" id="login-pass" />
+               
+               <asp:TextBox type="password" class="form-control login-field" value="" placeholder="输入密码" ID="userpassword" runat="server"></asp:TextBox></p>
               <label class="login-field-icon fui-lock" for="login-pass"></label>
             </div>
 
-            <a class="btn btn-primary btn-lg btn-block" href="#">登录</a>
-            <a class="login-link" href="#">忘记密码?</a>
+             
+            <asp:Button ID="Button1" class="btn btn-primary btn-lg btn-block" runat="server" Text="登录" onclick="Button1_Click" />
+            <a class="login-link" href="user_reg.aspx">没有账号?点击这里注册</a>
           </div>
         </div>
   </div>

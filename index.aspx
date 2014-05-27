@@ -31,7 +31,7 @@
           <li><a href="#">管理后台</a></li>
           <li><a href="user/user_panel.aspx">用户面板</a></li>
         </ul>
-        <h3 class="text-muted">小区保修系统</h3>
+        <h3 class="text-muted">小区报修系统</h3>
       </div>
 
       <div class="jumbotron">
@@ -42,25 +42,17 @@
 
       <div class="row marketing">
         <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+          <h4>我要报修</h4>
+          <p>需要报修的用户请<a href="#">点击这里</a>进入报修面板。</p>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+           
         </div>
 
         <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+           <h4>我是管理员</h4>
+          <p>管理员<a href="#">点击这里</a>进入后台。</p>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+           
         </div>
       </div>
 
