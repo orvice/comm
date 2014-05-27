@@ -18,7 +18,7 @@ public partial class user_reg : System.Web.UI.Page
         string pwd = text_userpwd.Text.ToString().Trim();
 
         //connect to sql server 
-        string Constr = "server=(local);user id=sa;pwd=;database=user_reg";
+        string Constr = "server=(local);user id=sa;pwd='123';database=user_reg";
 
         //实例化连接对象
         SqlConnection oc = new SqlConnection(Constr);
