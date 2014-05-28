@@ -28,11 +28,29 @@ public partial class user_user_login : System.Web.UI.Page
         SqlCommand com = new SqlCommand();
         com.Connection = oc;
 
-        if ( user_name == "" || user_pwd == "" )
+        //用户名or密码未输入
+        if (user_name == "" || user_pwd == "")
         {
             Response.Write("<script language=javascript>alert('用户名或密码未输入')</script>");
-            
+
         }
+
+        //查询用户名
+        string s_1 = " slect * from [dbo.comm_user] where user_name= ‘" + user_name + " '";
+        SqlCommand cmd_1 = new SqlCommand(s_1, oc);
+        SqlDataReader dr = cmd_1.ExecuteReader();
+
+        if (dr.Read())
+        {
+            //用户名存在
+        }
+
+        else
+        {
+            //用户名不存在
+            Response.Write("<script language=javascript>alert('此用户不存在')</script>");
+        }
+       
         
 
     }
