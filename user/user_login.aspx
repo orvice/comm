@@ -52,7 +52,7 @@
             </div>
 
              
-            <asp:Button ID="Button1" class="btn btn-primary btn-lg btn-block" runat="server" Text="登录" onclick="Button1_Click" />
+            <asp:Button ID="login_botton" class="btn btn-primary btn-lg btn-block" runat="server" Text="登录" onclick="login_botton_Click" />
             <a class="login-link" href="user_reg.aspx">没有账号?点击这里注册</a>
           </div>
         </div>
