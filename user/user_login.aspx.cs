@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 public partial class user_user_login : System.Web.UI.Page
 {
@@ -13,19 +15,11 @@ public partial class user_user_login : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        string strno = "<script>alert('username or passwd is wrong');<" + "/script>";
-        if (username.Text == "admin" && userpassword.Text == "123456")
-        {
-            //登录成功
-            Session["username"] = username.Text;
-            Session["userpass"] = userpassword.Text;
-            Response.Redirect("admin.aspx");
-
-        }
-        else
-        {
-            Page.RegisterClientScriptBlock("loginno", strno);
-        }
+        //获取登陆框的用户名和密码
+        string user_name = username.Text.ToString().Trim();
+        string user_pwd = userpwd.Text.ToString().Trim();
+        
+        
 
     }
 }

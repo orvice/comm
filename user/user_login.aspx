@@ -47,7 +47,7 @@
 
             <div class="form-group">
                
-               <asp:TextBox type="password" class="form-control login-field" value="" placeholder="输入密码" ID="userpassword" runat="server"></asp:TextBox></p>
+               <asp:TextBox type="password" class="form-control login-field" value="" placeholder="输入密码" ID="userpwd" runat="server"></asp:TextBox></p>
               <label class="login-field-icon fui-lock" for="login-pass"></label>
             </div>
 
