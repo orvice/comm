@@ -22,16 +22,11 @@ public partial class user_user_login : System.Web.UI.Page
 
         //connect to sql server 连接到数据库
         string s = ConfigurationManager.ConnectionStrings["siteconn"].ConnectionString;
-         
         SqlConnection conn = new SqlConnection(s);
         conn.Open();
         //查询用户名
-        string s_1 = " slect * from [dbo.comm_user] where user_name= ‘" + user_name + " '";
-
-        
+        string s_1 = " select * from [comm_user] where user_name= '" + user_name + " '";
         SqlCommand cmd_1 = new SqlCommand(s_1,conn);
-        
-        
         SqlDataReader dr = cmd_1.ExecuteReader();
 
         if (dr.Read())
