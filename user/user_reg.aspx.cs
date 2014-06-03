@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class user_reg : System.Web.UI.Page
 {
@@ -12,38 +14,17 @@ public partial class user_reg : System.Web.UI.Page
     {
 
     }
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Reg_Click(object sender, EventArgs e)
     {
-        string name = text_username.Text.ToString().Trim();
-        string pwd = text_userpwd.Text.ToString().Trim();
-
-        //connect to sql server 
-        string Constr = "server=(local);user id=sa;pwd='123';database=user_reg";
-
-        //实例化连接对象
-        SqlConnection oc = new SqlConnection(Constr);
-        //实例化Command对象
-        SqlCommand com = new SqlCommand();
-        com.Connection = oc;
-        com.CommandText = "insert into user_info(username,userpwd) values('" + name + "','" + pwd + "')";
-        try
-        {//打开数据库
-
-            oc.Open();
-            com.ExecuteNonQuery();
-            Response.Write("<script language=javascript>alert('增加用户成功！')</script>");
-
-        }
-        catch (Exception ex)
-        {
-            Response.Write(ex);
-            // Response.Write("<script language=javascript>alert('增加用户失败！')</script>");
-        }
-        finally
-        {
-            oc.Close();
-        }
-
+        
+        //获取登陆框的用户名和密码
+        string login_user_name = username.Text.ToString().Trim();
+        string login_user_pwd = userpwd.Text.ToString().Trim();
+        //connect to sql server 连接到数据库
+        string s = ConfigurationManager.ConnectionStrings["siteconn"].ConnectionString;
+        SqlConnection conn = new SqlConnection(s);
+        //打开数据库连接
+        conn.Open();
 
     }
 }
