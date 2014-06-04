@@ -32,6 +32,12 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+      <style type="text/css">
+          .style2
+          {
+              width: 101px;
+          }
+      </style>
   </head>
 
   <body>
@@ -77,17 +83,47 @@
 
           <div class="row placeholders">
               <table>
-               <tr>
-               <td>用户名</td>
-               <td><asp:TextBox ID="username" class="form-control" runat="server" Width="300px"></asp:TextBox>  </td>
+               <tr >
+               <td height="50" class="style2">用户名</td>
+               <td ><asp:TextBox ID="username" value="" placeholder="用户名" class="form-control" runat="server" ></asp:TextBox>  </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                       ErrorMessage="请输入用户名" ControlToValidate="username"></asp:RequiredFieldValidator></td>
                </tr>
 
                 <tr>
-               <td>密码</td>
-               <td><asp:TextBox ID="userpwd" class="form-control" runat="server" Width="300px"></asp:TextBox> </td>
+               <td height="50" class="style2">密码</td>
+               <td><asp:TextBox type="password" ID="userpwd" placeholder="密码" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                       ErrorMessage="请输入密码" ControlToValidate="userpwd"></asp:RequiredFieldValidator></td>
                </tr>
 
-               <tr><td><asp:Button ID="Reg" class="btn btn-lg btn-primary" runat="server" onclick="Reg_Click" Text="立即注册" />  </td>  </tr>
+               <tr>
+               <td height="50" class="style2">姓名</td>
+               <td><asp:TextBox ID="fullname" placeholder="输入姓名" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                       ErrorMessage="请输入姓名" ControlToValidate="fullname"></asp:RequiredFieldValidator></td>
+               </tr>
+
+               <tr>
+               <td height="50" class="style2">邮箱</td>
+               <td><asp:TextBox ID="email" placeholder="输入邮箱" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                       ErrorMessage="请输入邮箱" ControlToValidate="email"></asp:RequiredFieldValidator></td>
+               </tr>
+
+               <tr>
+               <td height="50" class="style2">房间号</td>
+               <td><asp:TextBox ID="add" placeholder="输入您的房间号" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
+                       ErrorMessage="请输入房间号" ControlToValidate="add"></asp:RequiredFieldValidator></td>
+               </tr>
+
+               <tr>
+               <td height="50" class="style2">其他信息</td>
+               <td><asp:TextBox ID="TextBox4" placeholder="其他信息，可留空" class="form-control" runat="server" ></asp:TextBox> </td>
+               </tr>
+
+               <tr><td colspan="2" align="center">   <asp:Button ID="Reg" class="btn btn-lg btn-primary" runat="server" onclick="Reg_Click" Text="立即注册" />  </td>  </tr>
               </table>             
           </div>
 
