@@ -14,7 +14,7 @@ public partial class user_reg : System.Web.UI.Page
     {
 
     }
-    protected void Reg_Click(object sender, EventArgs e)
+    protected void reg_botton_Click(object sender, EventArgs e)
     {
         
         //获取登陆框的用户名和密码

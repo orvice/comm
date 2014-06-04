@@ -1,6 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="user_reg.aspx.cs" Inherits="user_reg" %>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,7 +39,7 @@
   </head>
 
   <body>
-  <form id="form1" runat="server">
+  <form id="reg" runat="server">
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -123,7 +121,7 @@
                <td><asp:TextBox ID="info" placeholder="其他信息，可留空" class="form-control" runat="server" ></asp:TextBox> </td>
                </tr>
 
-               <tr><td colspan="2" align="center">   <asp:Button ID="Reg" class="btn btn-lg btn-primary" runat="server" onclick="Reg_Click" Text="立即注册" />  </td>  </tr>
+               <tr><td colspan="2" align="center">   <asp:Button ID="reg_botton" class="btn btn-lg btn-primary" runat="server" Text="立即注册" onclick="reg_botton_Click"  />  </td>  </tr>
               </table>             
           </div>
 
