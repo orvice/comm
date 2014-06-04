@@ -32,19 +32,27 @@ public partial class user_reg : System.Web.UI.Page
         string s_1 = " select * from [comm_user] where user_name= '" + reg_user_name + " ' ";
         SqlCommand cmd_1 = new SqlCommand(s_1, conn);
         SqlDataReader dr = cmd_1.ExecuteReader();
+        
 
         if (dr.Read())
         {
             //用户名存在
             Response.Write("<script language=javascript>alert('这个用户名已经有人用了啦，请换一个 ')</script>");
-
+            conn.Close();
         }
         else
         {
-            string write_to_db = "insert to [comm_user](user_name,user_pwd,user_email,user_fullname,user_add,user_info) values('" + reg_user_name + "','" + reg_user_pwd + "''" + reg_user_fullname + "','" + reg_user_email + "''" + reg_user_add + "','" + reg_user_info + "')";
+            //关闭conn连接
+            conn.Close();
+            //重新打开连接
+            conn.Open();
+            //string write_to_db = "insert into [comm_user] values('" + reg_user_name + "','" + reg_user_pwd + "','" + reg_user_fullname + "','" + reg_user_email + "','" + reg_user_add + "','" + reg_user_info + "')";
+            string write_to_db = "insert into [comm_user](user_name,user_pwd,user_email,user_fullname,user_add,user_info) values('" + reg_user_name + "','" + reg_user_pwd + "','" + reg_user_fullname + "','" + reg_user_email + "','" + reg_user_add + "','" + reg_user_info + "')";
             SqlCommand cmd_reg = new SqlCommand(write_to_db,conn);
-            Response.Write("<script language=javascript>alert('注册成功 ')</script>");
+            cmd_reg.ExecuteNonQuery();
+            conn.Close();
+            Response.Write("<script language=javascript>alert('注册成功,请返回登录 ')</script>");
+            Response.Redirect("user_login.aspx");
         }
-
     }
 }
