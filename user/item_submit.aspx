@@ -17,6 +17,7 @@
 
     <!-- Loading bootstrap-select -->
     <link href="../bootstrap/css/bootstrap-select.css" rel="stylesheet">
+    <script src="../bootstrap/js/bootstrap-select.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../css/dashboard.css" rel="stylesheet">
@@ -34,6 +35,18 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $(".selectpicker").selectpicker();
+
+        });
+
+      </script>
+
+
   </head>
 
   <body>
@@ -100,9 +113,11 @@
 
                 <tr>
                <td height="50" class="style2">分类</td>
-               <td> 
+               <td > 
+               
                    <asp:DropDownList ID="DD1" runat="server"  class="selectpicker" data-style="btn-primary" >
                    </asp:DropDownList>
+                
                     </td>
                <tr>
 
@@ -113,12 +128,7 @@
                        ErrorMessage="请输入姓名" ControlToValidate="fullname"></asp:RequiredFieldValidator></td>
                </tr>
 
-               <tr>
-               <td height="50" class="style2">邮箱</td>
-               <td><asp:TextBox ID="email" placeholder="输入邮箱" class="form-control" runat="server" ></asp:TextBox> </td>
-               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
-                       ErrorMessage="请输入邮箱" ControlToValidate="email"></asp:RequiredFieldValidator></td>
-               </tr>
+              
 
                <tr>
                <td height="50" class="style2">房间号</td>
