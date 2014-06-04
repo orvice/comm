@@ -15,6 +15,9 @@
     <!-- Loading Bootstrap -->
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
 
+    <!-- Loading bootstrap-select -->
+    <link href="../bootstrap/css/bootstrap-select.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="../css/dashboard.css" rel="stylesheet">
 
@@ -98,7 +101,7 @@
                 <tr>
                <td height="50" class="style2">分类</td>
                <td> 
-                   <asp:DropDownList ID="DD1" runat="server" class="select-block">
+                   <asp:DropDownList ID="DD1" runat="server"  class="selectpicker" data-style="btn-primary" >
                    </asp:DropDownList>
                     </td>
                <tr>
