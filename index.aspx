@@ -12,6 +12,11 @@
     <!-- Custom styles for this template -->
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
 
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -43,7 +48,7 @@
       <div class="row marketing">
         <div class="col-lg-6">
           <h4>我要报修</h4>
-          <p>需要报修的用户请<a href="user/user_panel.aspx">点击这里</a>进入报修面板。</p>
+          <p>报修用户请<a href="user/user_panel.aspx">点击这里</a>进入报修面板。</p>
 
            
         </div>
