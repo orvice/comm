@@ -16,7 +16,7 @@ public partial class user_reg : System.Web.UI.Page
     }
     protected void reg_botton_Click(object sender, EventArgs e)
     {
-        //获取登陆框的用户名和密码
+        //获取登陆框的用户名和密码和其它信息
         string reg_user_name       = username.Text.ToString().Trim();
         string reg_user_pwd        = userpwd.Text.ToString().Trim();
         string reg_user_fullname   = fullname.Text.ToString().Trim();
@@ -38,6 +38,12 @@ public partial class user_reg : System.Web.UI.Page
             //用户名存在
             Response.Write("<script language=javascript>alert('这个用户名已经有人用了啦，请换一个 ')</script>");
 
+        }
+        else
+        {
+            string write_to_db = "insert to [comm_user](user_name,user_pwd,user_email,user_fullname,user_add,user_info) values('" + reg_user_name + "','" + reg_user_pwd + "''" + reg_user_fullname + "','" + reg_user_email + "''" + reg_user_add + "','" + reg_user_info + "')";
+            SqlCommand cmd_reg = new SqlCommand(write_to_db,conn);
+            Response.Write("<script language=javascript>alert('注册成功 ')</script>");
         }
 
     }
