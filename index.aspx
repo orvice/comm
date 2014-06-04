@@ -41,7 +41,7 @@
 
       <div class="jumbotron">
         <h1>欢迎使用报修系统</h1>
-        <p class="lead">  欢迎<del>来到召唤师峡谷</del>使用XX小区报修系统，在小区遇到任何故障均可使用本保修系统</p>
+        <p class="lead">  欢迎<del>来到召唤师峡谷</del>使用XX小区报修系统，在小区遇到任何故障均可使用本保修系统.</p>
         <p><a class="btn btn-lg btn-success" href="user/user_panel.aspx" role="button">进入用户中心</a></p>
       </div>
 
