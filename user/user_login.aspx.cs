@@ -32,9 +32,9 @@ public partial class user_login : System.Web.UI.Page
         if ( dr.Read() )
         {
             //用户名存在
-            string tmp_pwd = dr["user_pwd"].ToString();
+            string tmp_pwd       = dr["user_pwd"].ToString();
             string user_fullname = dr["user_fullname"].ToString();
-
+            string user_id       = dr["id"].ToString();
             if (login_user_pwd.Trim() != tmp_pwd.Trim())
             {
                 //密码错误
@@ -48,6 +48,7 @@ public partial class user_login : System.Web.UI.Page
                 //登录成功
                 Session["username"] = login_user_name;
                 Session["user_fullname"] = user_fullname;
+                Session["user_id"] = user_id;
                 Response.Redirect("user_panel.aspx");
 
             }
