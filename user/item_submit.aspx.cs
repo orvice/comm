@@ -12,6 +12,9 @@ public partial class user_item_submit : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!IsPostBack)
+        { DD1_bind(); }
+        
         //如果没有登录，跳转到登录页面。
         if (Session["username"] == null)
         {
@@ -25,9 +28,11 @@ public partial class user_item_submit : System.Web.UI.Page
             Label1.Text = Session["username"].ToString();
             //Label2.Text = Session["user_fullname"].ToString();
         }
+
+        
     }
 
-    protected void dd_bind()
+    protected void DD1_bind()
     {
         //connect to sql server 连接到数据库
         string s = ConfigurationManager.ConnectionStrings["siteconn"].ConnectionString;
