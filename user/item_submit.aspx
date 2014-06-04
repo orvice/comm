@@ -115,7 +115,7 @@
                <td height="50" class="style2">分类</td>
                <td > 
                
-                   <asp:DropDownList ID="DD1" runat="server"  class="selectpicker" data-style="btn-primary" >
+                   <asp:DropDownList ID="DD1" runat="server"  CssClass="selectpicker" >
                    </asp:DropDownList>
                 
                     </td>
