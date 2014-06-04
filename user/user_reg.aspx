@@ -39,7 +39,8 @@
   </head>
 
   <body>
-  <form id="reg" runat="server">
+  <form id="form1" runat="server">
+
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -57,7 +58,7 @@
           <ul class="nav navbar-nav navbar-right">
            <li><a href="user_login.aspx">返回登录界面</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
+         
            
          
         </div>
