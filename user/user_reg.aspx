@@ -19,6 +19,11 @@
     <!-- Custom styles for this template -->
     <link href="../css/dashboard.css" rel="stylesheet">
 
+    <!-- Loading Flat UI -->
+    <link href="../css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 

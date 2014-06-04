@@ -20,6 +20,11 @@
     <!-- Custom styles for this template -->
     <link href="../css/dashboard.css" rel="stylesheet">
 
+    <!-- Loading Flat UI -->
+    <link href="../css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -69,10 +74,6 @@
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="">更改密码</a></li>
@@ -86,10 +87,10 @@
           <div class="row placeholders">
               
 
-             <div class="col-xs-6 col-sm-3 placeholder">
+             
               
           <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用报修系统。
-            </div>
+            
           </div>
 
           <h2 class="sub-header">Section title</h2>
