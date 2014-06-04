@@ -43,14 +43,14 @@
       <div class="row marketing">
         <div class="col-lg-6">
           <h4>我要报修</h4>
-          <p>需要报修的用户请<a href="#">点击这里</a>进入报修面板。</p>
+          <p>需要报修的用户请<a href="user/user_panel.aspx">点击这里</a>进入报修面板。</p>
 
            
         </div>
 
         <div class="col-lg-6">
            <h4>我是管理员</h4>
-          <p>管理员<a href="#">点击这里</a>进入后台。</p>
+          <p>管理员<a href="user/admin_panel.aspx">点击这里</a>进入后台。</p>
 
            
         </div>
