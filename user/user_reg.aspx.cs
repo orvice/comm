@@ -16,7 +16,8 @@ public partial class user_reg : System.Web.UI.Page
     }
     protected void reg_botton_Click(object sender, EventArgs e)
     {
-        
+
+        Response.Write("<script language=javascript>alert('提交注册 ')</script>");
         //获取登陆框的用户名和密码
         string reg_user_name       = username.Text.ToString().Trim();
         string reg_user_pwd        = userpwd.Text.ToString().Trim();

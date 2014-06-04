@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>小区报修系统-用户中心 User Center</title>
+    <title>小区报修系统-用户注册 User Reg</title>
 
     <!-- Loading Bootstrap -->
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -59,7 +59,7 @@
           </ul>
           <form class="navbar-form navbar-right">
            
-          </form>
+         
         </div>
       </div>
     </div>
