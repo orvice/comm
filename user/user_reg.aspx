@@ -120,7 +120,7 @@
 
                <tr>
                <td height="50" class="style2">其他信息</td>
-               <td><asp:TextBox ID="TextBox4" placeholder="其他信息，可留空" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:TextBox ID="info" placeholder="其他信息，可留空" class="form-control" runat="server" ></asp:TextBox> </td>
                </tr>
 
                <tr><td colspan="2" align="center">   <asp:Button ID="Reg" class="btn btn-lg btn-primary" runat="server" onclick="Reg_Click" Text="立即注册" />  </td>  </tr>
