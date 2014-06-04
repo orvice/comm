@@ -95,7 +95,7 @@
             <img src="../images/icons/png/Pensils.png" alt="Compas" class="tile-image big-illustration">
             <h3 class="tile-title">Submit</h3>
             <p>在线提交报修</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">提交报修</a>
+            <a class="btn btn-primary btn-large btn-block" href="item_submit.aspx">提交报修</a>
           </div>
         </div>
 
@@ -104,7 +104,7 @@
             <img src="../images/icons/png/Clipboard.png" alt="Infinity-Loop" class="tile-image">
             <h3 class="tile-title">Lists</h3>
             <p>查看已经提交的报修清单</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">报修列表</a>
+            <a class="btn btn-primary btn-large btn-block" href="item_list.aspx">报修列表</a>
           </div>
         </div>
 
@@ -113,7 +113,7 @@
             <img src="../images/icons/png/Mail.png" alt="Pensils" class="tile-image">
             <h3 class="tile-title">Contact Admin</h3>
             <p>有任何问题请联系管理员 </p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">联系管理</a>
+            <a class="btn btn-primary btn-large btn-block" href="contact_admin.aspx">联系管理</a>
           </div>
         </div>
 
@@ -122,7 +122,7 @@
             <img src="../images/icons/png/Book.png" alt="Chat" class="tile-image">
             <h3 class="tile-title">Profile</h3>
             <p>修改用户资料</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">资料修改</a>
+            <a class="btn btn-primary btn-large btn-block" href="user_profile.aspx">资料修改</a>
           </div>
 
         </div>
