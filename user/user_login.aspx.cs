@@ -50,6 +50,7 @@ public partial class user_login : System.Web.UI.Page
                 Session["user_fullname"] = user_fullname;
                 Session["user_id"] = user_id;
                 Response.Redirect("user_panel.aspx");
+                conn.Close();
 
             }
         }
