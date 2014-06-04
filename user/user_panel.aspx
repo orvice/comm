@@ -1,7 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="user_panel.aspx.cs" Inherits="user_user_panel" %>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
