@@ -1,7 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="user_panel.aspx.cs" Inherits="user_user_panel" %>
-
-
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="user_change_pwd.aspx.cs" Inherits="user_user_change_pwd" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -67,15 +64,15 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">用户中心</a></li>
+            <li><a href="user_panel.aspx">用户中心</a></li>
             <li><a href="item_submit.aspx">提交报修</a></li>
-            <li><a href="item_list.aspx">报修列表</a></li>
+            <li ><a href="item_list.aspx">报修列表</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="contact_admin.aspx">联系管理员</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="user_change_pwd.aspx">更改密码</a></li>
+            <li class="active"><a href="user_change_pwd.aspx">更改密码</a></li>
             <li><a href="usre_profile.aspx">资料修改</a></li>
             <li><a href="logout.aspx">退出登录</a></li>
           </ul>
@@ -88,50 +85,32 @@
 
              
               
-          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用报修系统，请从左侧选择需要的操作，有问题请联系管理员。
+          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用报修系统。
             
           </div>
 
-          <h2 class="sub-header">控制面板</h2>
+          <h2 class="sub-header">Section title</h2>
           <div class="table-responsive">
-            <div class="row demo-tiles">
-        <div class="col-xs-3">
-          <div class="tile">
-            <img src="../images/icons/png/Pensils.png" alt="Compas" class="tile-image big-illustration">
-            <h3 class="tile-title">Submit</h3>
-            <p>在线提交报修</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">提交报修</a>
-          </div>
-        </div>
-
-        <div class="col-xs-3">
-          <div class="tile">
-            <img src="../images/icons/png/Clipboard.png" alt="Infinity-Loop" class="tile-image">
-            <h3 class="tile-title">Lists</h3>
-            <p>查看已经提交的报修清单</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">报修列表</a>
-          </div>
-        </div>
-
-        <div class="col-xs-3">
-          <div class="tile">
-            <img src="../images/icons/png/Mail.png" alt="Pensils" class="tile-image">
-            <h3 class="tile-title">Contact Admin</h3>
-            <p>有任何问题请联系管理员 </p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">联系管理</a>
-          </div>
-        </div>
-
-        <div class="col-xs-3">
-          <div class="tile">
-            <img src="../images/icons/png/Book.png" alt="Chat" class="tile-image">
-            <h3 class="tile-title">Profile</h3>
-            <p>修改用户资料</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">资料修改</a>
-          </div>
-
-        </div>
-      </div> <!-- /tiles -->
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
