@@ -38,7 +38,7 @@ public partial class user_item_submit : System.Web.UI.Page
         string s = ConfigurationManager.ConnectionStrings["siteconn"].ConnectionString;
         SqlConnection conn = new SqlConnection(s);
         //打开数据库连接
-        conn.Open();
+        //conn.Open();
         string strsql = "select * from comm_rapia_type";
         SqlDataAdapter da = new SqlDataAdapter(strsql, conn);
         DataSet ds = new DataSet();
