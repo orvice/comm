@@ -34,7 +34,7 @@
   </head>
 
   <body>
-
+  <form id="form1" runat="server">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -76,40 +76,65 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">用户中心 User Center</h1>
+          <h1 class="page-header">提交报修 Items Submit</h1>
 
           <div class="row placeholders">
               
 
              
               
-          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用报修系统。
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          
+
+          <div class="row placeholders">
+              <table>
+               <tr >
+               <td height="50" class="style2">项目</td>
+               <td ><asp:TextBox ID="username" value="" placeholder="用户名" class="form-control" runat="server" ></asp:TextBox>  </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                       ErrorMessage="请输入用户名" ControlToValidate="username"></asp:RequiredFieldValidator></td>
+               </tr>
+
+                <tr>
+               <td height="50" class="style2">分类</td>
+               <td><asp:TextBox type="password" ID="userpwd" placeholder="密码" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                       ErrorMessage="请输入密码" ControlToValidate="userpwd"></asp:RequiredFieldValidator></td>
+               </tr>
+
+               <tr>
+               <td height="50" class="style2">姓名</td>
+               <td><asp:TextBox ID="fullname" placeholder="输入姓名" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                       ErrorMessage="请输入姓名" ControlToValidate="fullname"></asp:RequiredFieldValidator></td>
+               </tr>
+
+               <tr>
+               <td height="50" class="style2">邮箱</td>
+               <td><asp:TextBox ID="email" placeholder="输入邮箱" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                       ErrorMessage="请输入邮箱" ControlToValidate="email"></asp:RequiredFieldValidator></td>
+               </tr>
+
+               <tr>
+               <td height="50" class="style2">房间号</td>
+               <td><asp:TextBox ID="add" placeholder="输入您的房间号" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
+                       ErrorMessage="请输入房间号" ControlToValidate="add"></asp:RequiredFieldValidator></td>
+               </tr>
+
+               <tr>
+               <td height="50" class="style2">其他信息</td>
+               <td><asp:TextBox ID="info" placeholder="其他信息，可留空" class="form-control" runat="server" ></asp:TextBox> </td>
+               </tr>
+
+               <tr><td colspan="2" align="center">   <asp:Button ID="item_submit_botton" class="btn btn-lg btn-primary" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  </td>  </tr>
+              </table>             
+          </div>
             
           </div>
 
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+           
         </div>
       </div>
     </div>
@@ -120,5 +145,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
+  </form>
   </body>
 </html>
