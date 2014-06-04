@@ -33,6 +33,7 @@ public partial class user_user_login : System.Web.UI.Page
         {
             //用户名存在
             string tmp_pwd = dr["user_pwd"].ToString();
+            string user_fullname = dr["user_fullname"].ToString();
 
             if (login_user_pwd.Trim() != tmp_pwd.Trim())
             {
@@ -46,6 +47,7 @@ public partial class user_user_login : System.Web.UI.Page
 
                 //登录成功
                 Session["username"] = login_user_name;
+                Session["user_fullname"] = user_fullname;
                 Response.Redirect("user_panel.aspx");
 
             }

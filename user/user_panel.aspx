@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>小区报修系统-用户中心 User Center</title>
 
     <!-- Loading Bootstrap -->
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -44,14 +44,15 @@
           <a class="navbar-brand" href="#">小区报修系统</a>
         </div>
         <div class="navbar-collapse collapse">
+          
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="logout.aspx">退出</a></li>
+            <li>  <a href='#'>用户: 
+            <asp:Label id="Label1"   Runat="server" Text="Label"></asp:Label>
+           </a></li>            
+           <li><a href="logout.aspx">退出</a></li>
           </ul>
           <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
+           
           </form>
         </div>
       </div>
@@ -61,7 +62,7 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview</a></li>
+            <li class="active"><a href="#">用户中心</a></li>
             <li><a href="#">提交报修</a></li>
             <li><a href="#">报修列表</a></li>
             <li><a href="#">Export</a></li>
@@ -74,34 +75,20 @@
             <li><a href="">More navigation</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
+            <li><a href="">更改密码</a></li>
+            <li><a href="">资料修改</a></li>
+            <li><a href="logout.aspx">退出登录</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
+          <h1 class="page-header">用户中心 User Center</h1>
 
           <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
+              
+
+             <div class="col-xs-6 col-sm-3 placeholder">
+              
+          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用报修系统。
             </div>
           </div>
 
