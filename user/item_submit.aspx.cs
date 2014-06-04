@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class user_item_submit : System.Web.UI.Page
 {
@@ -21,6 +24,35 @@ public partial class user_item_submit : System.Web.UI.Page
             //string Label1.Text = "";
             Label1.Text = Session["username"].ToString();
             //Label2.Text = Session["user_fullname"].ToString();
+        }
+    }
+
+    protected void dd_bind()
+    {
+        //connect to sql server 连接到数据库
+        string s = ConfigurationManager.ConnectionStrings["siteconn"].ConnectionString;
+        SqlConnection conn = new SqlConnection(s);
+        //打开数据库连接
+        conn.Open();
+        string strsql = "select * from comm_rapia_type";
+        SqlDataAdapter da = new SqlDataAdapter(strsql, conn);
+        DataSet ds = new DataSet();
+        try
+        {
+            conn.Open();
+            da.Fill(ds, "comm_rapia_type");
+            DD1.DataSource = ds.Tables["comm_rapia_type"];
+            DD1.DataTextField = "r_name";
+            DD1.DataValueField = "r_id";
+            DD1.DataBind();
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex);
+        }
+        finally
+        {
+            conn.Close();
         }
     }
 

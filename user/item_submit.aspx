@@ -97,12 +97,13 @@
 
                 <tr>
                <td height="50" class="style2">分类</td>
-               <td><asp:TextBox type="password" ID="userpwd" placeholder="密码" class="form-control" runat="server" ></asp:TextBox> </td>
-               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                       ErrorMessage="请输入密码" ControlToValidate="userpwd"></asp:RequiredFieldValidator></td>
-               </tr>
-
+               <td> 
+                   <asp:DropDownList ID="DD1" runat="server" class="select-block">
+                   </asp:DropDownList>
+                    </td>
                <tr>
+
+
                <td height="50" class="style2">姓名</td>
                <td><asp:TextBox ID="fullname" placeholder="输入姓名" class="form-control" runat="server" ></asp:TextBox> </td>
                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
