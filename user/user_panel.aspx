@@ -53,9 +53,7 @@
            </a></li>            
            <li><a href="logout.aspx">退出</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-           
-          </form>
+          
         </div>
       </div>
     </div>
