@@ -4,15 +4,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-   
+    <title>小区报修系统-用户中心 User Center</title>
+     
+     <!-- Online jQuery
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+      <!-- Loading jQuery --> 
+     <script type="text/javascript" src="../js/jquery.min.js"></script>
 
-    <title>小区报修系统-用户中心 User Center</title> 
-
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+     <!-- Loading Bootstrap-Select --> 
     <script type="text/javascript" src="../bootstrap/js/bootstrap-select.js"></script>
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-select.css">
-
-
      
      <!-- Loading Bootstrap 3.0 --> 
      <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
