@@ -102,32 +102,34 @@
 
           
          
-              <table>
+              <table>               
+
+              
+
                <tr >
-               <td height="50" class="style2">项目</td>
-               <td ><asp:TextBox ID="username" value="" placeholder="用户名" class="form-control" runat="server" ></asp:TextBox>  </td>
+               <td height="50"  >问题描述</td>
+               <td ><asp:TextBox ID="item_info_text" value="" placeholder="简述需要保修的问题" class="form-control" runat="server" ></asp:TextBox>  </td>
                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                       ErrorMessage="请输入用户名" ControlToValidate="username"></asp:RequiredFieldValidator></td>
+                       ErrorMessage="请输入问题描述" ControlToValidate="item_info_text"></asp:RequiredFieldValidator></td>
                </tr>
 
-                <tr>
-               <td height="50" class="style2">分类</td>
-               <td > 
-               
-                   <asp:DropDownList ID="DD1"  class="selectpicker" runat="server">
-                   </asp:DropDownList>
-                
-                    </td>
                <tr>
-
-
-               <td height="50" class="style2">姓名</td>
-               <td><asp:TextBox ID="fullname" placeholder="输入姓名" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td height="50"  >问题地址</td>
+               <td><asp:TextBox ID="item_add_text" placeholder="输入问题所在地" class="form-control" runat="server" ></asp:TextBox> </td>
                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-                       ErrorMessage="请输入姓名" ControlToValidate="fullname"></asp:RequiredFieldValidator></td>
-               </tr>               
+                       ErrorMessage="请输入问题地址" ControlToValidate="item_add_text"></asp:RequiredFieldValidator></td>
+               </tr>     
+               
+               
+               <tr>
+               <td height="50" >选择分类</td>
+               <td >                
+                   <asp:DropDownList ID="DD1"  class="selectpicker" runat="server">
+                   </asp:DropDownList>                
+                    </td>
+               <tr>          
 
-               <tr><td colspan="2" align="center">   <asp:Button ID="item_submit_botton" class="btn btn-lg btn-primary" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  </td>  </tr>
+               <tr><td colspan="1" align="center">   <asp:Button ID="item_submit_botton" class="btn btn-lg btn-primary" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  </td>  </tr>
               </table>    
               
               
