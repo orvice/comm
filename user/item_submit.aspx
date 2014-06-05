@@ -12,12 +12,12 @@
      <script type="text/javascript" src="../js/jquery.min.js"></script>
 
      <!-- Loading Bootstrap-Select --> 
-    <script type="text/javascript" src="../bootstrap/js/bootstrap-select.js"></script>
+   
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-select.css">
      
      <!-- Loading Bootstrap 3.0 --> 
      <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
-     <script src="../bootstrap/js/bootstrap.min.js"></script>
+   
 
     <!-- Custom styles for this template -->
     <link href="../css/dashboard.css" rel="stylesheet">
