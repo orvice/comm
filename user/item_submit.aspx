@@ -96,12 +96,11 @@
     </div>
     </div>
 
-        
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">提交报修 Items Submit</h1>
 
-          <div class="row placeholders">
-          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <div class="row placeholders">
+          
+         
               <table>
                <tr >
                <td height="50" class="style2">项目</td>
@@ -131,10 +130,8 @@
 
                <tr><td colspan="2" align="center">   <asp:Button ID="item_submit_botton" class="btn btn-lg btn-primary" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  </td>  </tr>
               </table>             
-          </div>            
-          </div>           
-         </div>
-      
+         
+      </div>
    
 
     <!-- Bootstrap core JavaScript
