@@ -118,13 +118,21 @@
                <td >                
                    <asp:DropDownList ID="DD1"  class="selectpicker" runat="server">
                    </asp:DropDownList>                
-                    </td>
+               </td>
                <tr>          
 
-               <tr><td colspan="1" align="center">   <asp:Button ID="item_submit_botton" class="btn btn-lg btn-primary" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  </td>  </tr>
+               <tr>
+               <td colspan="1" align="center">   
+               <asp:Button ID="item_submit_botton" class="btn btn-lg btn-primary" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  
+               </td> 
+               </tr>
                
 
-              <tr><td colspan="2" align="right"> <p align="center" data-toggle="tooltip" data-placement="bottom" title="将用您的ID提交给管理员"></p>  </td>  </tr>
+              <tr>
+              <td colspan="2" align="right"> 
+                    <p align="center" data-toggle="tooltip" data-placement="bottom" title="将用您的ID提交给管理员">您的ID为: <asp:Label id="Label3"   Runat="server" Text="Label"></asp:Label></p>  
+              </td>  
+              </tr>
 
               </table>        
 
