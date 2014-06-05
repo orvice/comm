@@ -45,14 +45,10 @@
               // $('.selectpicker').selectpicker('hide');
           });
     </script>
-
-
   </head>
 
   <body>
-  <form id="form1" runat="server">
-
-    
+  <form id="form1" runat="server">    
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -99,12 +95,8 @@
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">提交报修 Items Submit</h1>
-
-          
          
-              <table>               
-
-              
+              <table>
 
                <tr >
                <td height="50"  >问题描述</td>
@@ -130,17 +122,37 @@
                <tr>          
 
                <tr><td colspan="1" align="center">   <asp:Button ID="item_submit_botton" class="btn btn-lg btn-primary" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  </td>  </tr>
-              </table>    
-              
-              
-          
+               
+
+              <tr><td colspan="2" align="right"> <p align="center" data-toggle="tooltip" data-placement="bottom" title="将用您的ID提交给管理员"></p>  </td>  </tr>
+
+              </table>        
 
       </div>
-   
+
+
+        
+          
+        
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
+     <!-- Load JS here for greater good =============================-->
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.js"></script>
+    <script src="../js/bootstrap-switch.js"></script>
+    <script src="../js/flatui-checkbox.js"></script>
+    <script src="../js/flatui-radio.js"></script>
+    <script src="../js/jquery.tagsinput.js"></script>
+    <script src="../js/jquery.placeholder.js"></script>
+    <script src="../js/jquery.stacktable.js"></script>
+    <script src="http://vjs.zencdn.net/4.3/video.js"></script>
+    <script src="../js/application.js"></script>
 
   </form>
   </body>
