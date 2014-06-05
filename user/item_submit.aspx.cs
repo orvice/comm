@@ -25,7 +25,7 @@ public partial class user_item_submit : System.Web.UI.Page
         else
         {
             //string Label1.Text = "";
-            Label1.Text = Session["username"].ToString();
+            //Label1.Text = Session["username"].ToString();
             //Label2.Text = Session["user_fullname"].ToString();
         }
 

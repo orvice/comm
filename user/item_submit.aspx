@@ -4,27 +4,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+   
 
-    <title>小区报修系统-用户中心 User Center</title>
+    <title>小区报修系统-用户中心 User Center</title> 
 
-    <!-- Loading Bootstrap -->
-    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap-select.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-select.css">
 
-    <!-- Loading bootstrap-select -->
-    <link href="../bootstrap/css/bootstrap-select.css" rel="stylesheet">
-    <script src="../bootstrap/js/bootstrap-select.js"></script>
+
+     
+     <!-- Loading Bootstrap 3.0 --> 
+     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+     <script src="../bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../css/dashboard.css" rel="stylesheet">
 
     <!-- Loading Flat UI -->
     <link href="../css/flat-ui.css" rel="stylesheet">
-
     <link rel="shortcut icon" href="../images/favicon.ico">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -36,21 +34,25 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script type="text/javascript">
+      <script type="text/javascript">
+          $(window).on('load', function () {
 
-        $(document).ready(function () {
+              $('.selectpicker').selectpicker({
+                  'selectedText': 'cat'
+              });
 
-            $(".selectpicker").selectpicker();
-
-        });
-
-      </script>
+              // $('.selectpicker').selectpicker('hide');
+          });
+    </script>
 
 
   </head>
 
   <body>
   <form id="form1" runat="server">
+
+    
+
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -91,17 +93,14 @@
             <li><a href="logout.aspx">退出登录</a></li>
           </ul>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    </div>
+    </div>
+
+        
           <h1 class="page-header">提交报修 Items Submit</h1>
 
           <div class="row placeholders">
-              
-
-             
-              
           <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          
-
           <div class="row placeholders">
               <table>
                <tr >
@@ -115,7 +114,7 @@
                <td height="50" class="style2">分类</td>
                <td > 
                
-                   <asp:DropDownList ID="DD1" runat="server"  CssClass="selectpicker" >
+                   <asp:DropDownList ID="DD1"  class="selectpicker" runat="server">
                    </asp:DropDownList>
                 
                     </td>
@@ -128,30 +127,15 @@
                        ErrorMessage="请输入姓名" ControlToValidate="fullname"></asp:RequiredFieldValidator></td>
                </tr>
 
-              
-
-               <tr>
-               <td height="50" class="style2">房间号</td>
-               <td><asp:TextBox ID="add" placeholder="输入您的房间号" class="form-control" runat="server" ></asp:TextBox> </td>
-               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
-                       ErrorMessage="请输入房间号" ControlToValidate="add"></asp:RequiredFieldValidator></td>
-               </tr>
-
-               <tr>
-               <td height="50" class="style2">其他信息</td>
-               <td><asp:TextBox ID="info" placeholder="其他信息，可留空" class="form-control" runat="server" ></asp:TextBox> </td>
-               </tr>
+               
 
                <tr><td colspan="2" align="center">   <asp:Button ID="item_submit_botton" class="btn btn-lg btn-primary" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  </td>  </tr>
               </table>             
-          </div>
-            
-          </div>
-
-           
-        </div>
-      </div>
-    </div>
+          </div>            
+          </div>           
+         </div>
+      
+   
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
