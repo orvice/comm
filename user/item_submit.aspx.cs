@@ -64,5 +64,8 @@ public partial class user_item_submit : System.Web.UI.Page
 
     protected void item_submit_botton_Click(object sender, EventArgs e)
     {
+        //获取文本框变量
+        string item_info = item_info_text.Text.ToString().Trim();
+        string item_add = item_add_text.Text.ToString().Trim();
     }
 }
