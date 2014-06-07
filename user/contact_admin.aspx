@@ -42,7 +42,7 @@
                <td height="50" class="style2">问题描述</td>
                <td><asp:TextBox ID="ticket" placeholder="问题描述" class="form-control" runat="server" Height="150" Width="300"></asp:TextBox> </td>
                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
-                       ErrorMessage="问题描述" ControlToValidate="ticket"></asp:RequiredFieldValidator></td>
+                       ErrorMessage="请输入问题描述" ControlToValidate="ticket"></asp:RequiredFieldValidator></td>
                </tr>
 
               

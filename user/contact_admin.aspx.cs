@@ -31,5 +31,22 @@ public partial class user_contact_admin : System.Web.UI.Page
 
     protected void contact_admin_botton_Click(object sender, EventArgs e)
     {
+        //获取tk
+        string tk = ticket.Text.ToString().Trim();
+        string user_name = Session["username"].ToString();
+        string user_id = Session["user_id"].ToString();
+
+        //connect to sql server 连接到数据库
+        string s = ConfigurationManager.ConnectionStrings["siteconn"].ConnectionString;
+        SqlConnection conn = new SqlConnection(s);
+        //打开数据库连接
+        conn.Open();
+
+        //写入语句
+        string tk_add = "insert into [comm_tk](tk_user_id,tk_user_name,tk_content) values('" + user_id + "','" + user_name + "','" + tk + "')";
+        SqlCommand cmd_tk_add = new SqlCommand(tk_add, conn);
+        cmd_tk_add.ExecuteNonQuery();
+        conn.Close();
+        Response.Write("<script language=javascript>alert('提交成功 ')</script>");
     }
 }
