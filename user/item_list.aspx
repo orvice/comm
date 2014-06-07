@@ -52,7 +52,7 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">用户中心 User Center</h1>
+          <h1 class="page-header">报修列表 Item List</h1>
 
           <div class="row placeholders">
               
@@ -60,7 +60,13 @@
              
               
           <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用报修系统。
-            
+           <form id="form1" runat="server"> 
+             
+             <asp:GridView ID="GV1" runat="server">
+             </asp:GridView>
+
+
+           </form>           
           </div>
 
           <h2 class="sub-header">Section title</h2>
