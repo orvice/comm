@@ -1,32 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
-
-<%@ Register TagPrefix="uc" TagName="top" Src="lib/header.ascx" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-
-   <!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/jumbotron-narrow.css" rel="stylesheet">
-
-    <!-- Loading Flat UI -->
-    <link href="css/flat-ui.css" rel="stylesheet">
-
-    <link rel="shortcut icon" href="images/favicon.ico">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+<head id="Head1" runat="server">  
     <title>小区物业管理系统</title>
+    <!-- Load  lib/index_header.inc -->
+    <!--#include File="lib/index_header.inc"-->
 </head>
 <body>
 
