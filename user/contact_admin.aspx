@@ -32,40 +32,29 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">用户中心 User Center</h1>
+          <h1 class="page-header">联系管理员 Contact Admin</h1>              
+          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> ，有问题请在此提交给管理员。
+           <div class="row placeholders">
+           <form id="form1" runat="server">
+              <table>
+                
+               <tr>
+               <td height="50" class="style2">问题描述</td>
+               <td><asp:TextBox ID="ticket" placeholder="问题描述" class="form-control" runat="server" Height="150" Width="300"></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
+                       ErrorMessage="问题描述" ControlToValidate="ticket"></asp:RequiredFieldValidator></td>
+               </tr>
 
-          <div class="row placeholders">
               
 
-             
-              
-          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用报修系统。
+               <tr><td colspan="2" align="center">   <asp:Button ID="contact_admin_botton" class="btn btn-lg btn-primary" runat="server" Text="提交给管理员" onclick="contact_admin_botton_Click"  />  </td>  </tr>
+              </table>  
+          </form>           
+          </div>
             
-          </div>
+           
 
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+         
         </div>
       </div>
     </div>

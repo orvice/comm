@@ -23,8 +23,13 @@ public partial class user_contact_admin : System.Web.UI.Page
         {
             //string Label1.Text = "";
             Label1.Text = Session["username"].ToString();
-            //Label2.Text = Session["user_fullname"].ToString();
+            Label2.Text = Session["user_fullname"].ToString();
             //Label3.Text = Session["user_id"].ToString();
         }
+    }
+
+
+    protected void contact_admin_botton_Click(object sender, EventArgs e)
+    {
     }
 }
