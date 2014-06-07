@@ -12,8 +12,7 @@ public partial class user_item_list : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
-        { gv_bind(); }
+        
 
         //如果没有登录，跳转到登录页面。
         if (Session["username"] == null)
@@ -29,6 +28,9 @@ public partial class user_item_list : System.Web.UI.Page
             //Label2.Text = Session["user_fullname"].ToString();
             //Label3.Text = Session["user_id"].ToString();
         }
+
+        if (!IsPostBack)
+        { gv_bind(); }
     }
 
     public void gv_bind()

@@ -55,16 +55,11 @@
           <h1 class="page-header">报修列表 Item List</h1>
 
           <div class="row placeholders">
-              
-
-             
-              
-          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用报修系统。
+         
            <form id="form1" runat="server"> 
              
-             <asp:GridView ID="GV1" runat="server">
+             <asp:GridView ID="GV1"  class="striped" runat="server">
              </asp:GridView>
-
 
            </form>           
           </div>
