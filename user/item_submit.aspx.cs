@@ -69,11 +69,20 @@ public partial class user_item_submit : System.Web.UI.Page
         string item_add    = item_add_text.Text.ToString().Trim();
         string user_id     = Session["user_id"].ToString();
         //string item_type   = DD1.Text.ToString.Trim();
+        string item_type   = DD1.SelectedValue.ToString();  
 
         //connect to sql server 连接到数据库
         string s = ConfigurationManager.ConnectionStrings["siteconn"].ConnectionString;
         SqlConnection conn = new SqlConnection(s);
         //打开数据库连接
         conn.Open();
+        //录入数据库
+        string item_add_to_db = "insert into [comm_item_log](user_id,rapir_type,rapir_status,rapir_info,rapir_add) values('" + user_id + "','" + item_type + "','未处理','" + item_info + "','" + item_add + "')";
+        SqlCommand cmd_item_add = new SqlCommand(item_add_to_db, conn);
+        cmd_item_add.ExecuteNonQuery();
+        //关闭数据库连接并返回结果
+        conn.Close();
+        Response.Write("<script language=javascript>alert('报修成功，即将返回列表 ')</script>");
+        Response.Redirect("item_list.aspx");
     }
 }
