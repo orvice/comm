@@ -49,7 +49,7 @@ public partial class user_item_submit : System.Web.UI.Page
             da.Fill(ds, "comm_rapia_type");
             DD1.DataSource = ds.Tables["comm_rapia_type"];
             DD1.DataTextField = "r_name";
-            DD1.DataValueField = "r_id";
+            DD1.DataValueField = "r_name";
             DD1.DataBind();
         }
         catch (Exception ex)
