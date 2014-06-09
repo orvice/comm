@@ -40,7 +40,7 @@
             
           </div>
 
-          <h2 class="sub-header">控制面板</h2>
+          <h2 class="sub-header">控制面板 Control Panel </h2>
           <div class="table-responsive">
             <div class="row demo-tiles">
         <div class="col-xs-3">
