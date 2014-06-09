@@ -33,12 +33,40 @@
           <h1 class="page-header">修改密码 Change Password</h1>
 
           <div class="row placeholders">
+          <form id="form1" runat="server">            
               
+           <table>
 
-             
-              
-          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用报修系统。
-            
+               <tr >
+               <td height="50"  >当前密码</td>
+               <td ><asp:TextBox ID="old_pwd_text" value="" placeholder="输入当前密码" class="form-control" runat="server" ></asp:TextBox>  </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                       ErrorMessage="请输入当前密码" ControlToValidate="old_pwd_text"></asp:RequiredFieldValidator></td>
+               </tr>
+
+               <tr>
+               <td height="50"  >新密码</td>
+               <td><asp:TextBox ID="new_pwd_text" placeholder="输入新密码" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                       ErrorMessage="请输入新密码" ControlToValidate="new_pwd_text"></asp:RequiredFieldValidator></td>
+               </tr>  
+               
+                 <tr>
+               <td height="50"  >确认新密码</td>
+               <td><asp:TextBox ID="new_pwd_re_text" placeholder="确认新密码" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:CompareValidator ID="CompareValidator1" runat="server" 
+                       ErrorMessage="2次输入的密码不同（" ControlToCompare="new_pwd_re_text" 
+                       ControlToValidate="new_pwd_text"></asp:CompareValidator></td>
+               </tr>                             
+
+               <tr>
+               <td colspan="1" align="center">   
+               <asp:Button ID="change_pwd_botton" class="btn btn-lg btn-primary" runat="server" Text="修改密码" onclick="change_pwd_botton_Click"  />  
+               </td> 
+               </tr> 
+
+              </table>
+           </form>
           </div>
 
            
