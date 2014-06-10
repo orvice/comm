@@ -38,17 +38,17 @@
                   DataSourceID="SqlDataSource1">
                   <Columns>
                       <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                      <asp:BoundField DataField="item_id" HeaderText="item_id" InsertVisible="False" 
+                      <asp:BoundField DataField="item_id" HeaderText="ID" InsertVisible="False" 
                           ReadOnly="True" SortExpression="item_id" />
-                      <asp:BoundField DataField="user_id" HeaderText="user_id" 
+                      <asp:BoundField DataField="user_id" HeaderText="用户ID" 
                           SortExpression="user_id" />
-                      <asp:BoundField DataField="rapir_type" HeaderText="rapir_type" 
+                      <asp:BoundField DataField="rapir_type" HeaderText="分类" 
                           SortExpression="rapir_type" />
-                      <asp:BoundField DataField="rapir_status" HeaderText="rapir_status" 
+                      <asp:BoundField DataField="rapir_status" HeaderText="状态" 
                           SortExpression="rapir_status" />
-                      <asp:BoundField DataField="rapir_info" HeaderText="rapir_info" 
+                      <asp:BoundField DataField="rapir_info" HeaderText="详情" 
                           SortExpression="rapir_info" />
-                      <asp:BoundField DataField="rapir_add" HeaderText="rapir_add" 
+                      <asp:BoundField DataField="rapir_add" HeaderText="地址" 
                           SortExpression="rapir_add" />
                   </Columns>
               </asp:GridView>              

@@ -36,13 +36,13 @@
                   DataKeyNames="tk_id" DataSourceID="SqlDataSource1"    >
                   <Columns>
                       <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                      <asp:BoundField DataField="tk_id" HeaderText="tk_id" InsertVisible="False" 
+                      <asp:BoundField DataField="tk_id" HeaderText="TK ID" InsertVisible="False" 
                           ReadOnly="True" SortExpression="tk_id" />
-                      <asp:BoundField DataField="tk_user_id" HeaderText="tk_user_id" 
+                      <asp:BoundField DataField="tk_user_id" HeaderText="用户ID" 
                           SortExpression="tk_user_id" />
-                      <asp:BoundField DataField="tk_user_name" HeaderText="tk_user_name" 
+                      <asp:BoundField DataField="tk_user_name" HeaderText="提交用户" 
                           SortExpression="tk_user_name" />
-                      <asp:BoundField DataField="tk_content" HeaderText="tk_content" 
+                      <asp:BoundField DataField="tk_content" HeaderText="工单内容" 
                           SortExpression="tk_content" />
                   </Columns>
                  
