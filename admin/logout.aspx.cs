@@ -9,7 +9,7 @@ public partial class user_logout : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Session["username"] = null;
+        Session["admin"] = null;
         Response.Redirect("../index.aspx");
     }
 }
