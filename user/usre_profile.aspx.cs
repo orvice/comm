@@ -53,7 +53,28 @@ public partial class user_usre_profile : System.Web.UI.Page
     }
 
     protected void update_botton_Click(object sender, EventArgs e)
-    { 
+    {
 
+        //获取用户ID和UserName
+        string user_id = Session["user_id"].ToString();
+        string user_name = Session["username"].ToString();
+        //获取新的用户信息
+        string user_fullname = fullname.Text.ToString().Trim();
+        string user_email = email.Text.ToString().Trim();
+        string user_add = add.Text.ToString().Trim();
+        string user_info = info.Text.ToString().Trim();
+
+        //connect to sql server 连接到数据库
+        string s = ConfigurationManager.ConnectionStrings["siteconn"].ConnectionString;
+        SqlConnection conn = new SqlConnection(s);
+        //打开数据库连接
+        conn.Open();
+
+        string update_profile = "UPDATE  [comm_user] SET user_fullname= '" + user_fullname + "' WHERE id='" + user_id + "' ";
+        SqlCommand cmd_change_pwd = new SqlCommand(update_profile, conn);
+        cmd_change_pwd.ExecuteNonQuery();
+        //关闭数据库连接并返回结果
+        conn.Close();
+        Response.Write("<script language=javascript>alert('修改成功 ')</script>");
     }
 }
