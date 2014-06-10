@@ -25,16 +25,16 @@ public partial class admin_login : System.Web.UI.Page
         //打开数据库连接
         conn.Open();
         //查询用户名
-        string s_1 = " select * from [comm_user] where user_name= '" + login_user_name + " ' ";
+        string s_1 = " select * from [comm_admin] where admin_name= '" + login_user_name + " ' ";
         SqlCommand cmd_1 = new SqlCommand(s_1,conn);
         SqlDataReader dr = cmd_1.ExecuteReader();
 
         if ( dr.Read() )
         {
             //用户名存在
-            string tmp_pwd       = dr["user_pwd"].ToString();
-            string user_fullname = dr["user_fullname"].ToString();
-            string user_id       = dr["id"].ToString();
+            string tmp_pwd       = dr["admin_pwd"].ToString();
+            string user_fullname = dr["admin_fullname"].ToString();
+            string user_id       = dr["admin_id"].ToString();
             if (login_user_pwd.Trim() != tmp_pwd.Trim())
             {
                 //密码错误
@@ -46,10 +46,10 @@ public partial class admin_login : System.Web.UI.Page
                 //Response.Write("<script language=javascript>alert('密码正确')</script>");
 
                 //登录成功
-                Session["username"] = login_user_name;
-                Session["user_fullname"] = user_fullname;
-                Session["user_id"] = user_id;
-                Response.Redirect("user_panel.aspx");
+                Session["admin"] = login_user_name;
+                Session["admin_fullname"] = user_fullname;
+                Session["admin_id"] = user_id;
+                Response.Redirect("admin_panel.aspx");
                 conn.Close();
 
             }
