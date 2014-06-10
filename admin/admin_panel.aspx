@@ -15,16 +15,14 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">用户中心</a></li>
-            <li><a href="item_submit.aspx">提交报修</a></li>
+            <li class="active"><a href="#">管理中心</a></li>            
             <li><a href="item_list.aspx">报修列表</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="contact_admin.aspx">联系管理员</a></li>
+            <li><a href="tk_list.aspx">工单列表</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="user_change_pwd.aspx">更改密码</a></li>
-            <li><a href="usre_profile.aspx">资料修改</a></li>
+            <li><a href="admin_change_pwd.aspx">更改密码</a></li>            
             <li><a href="logout.aspx">退出登录</a></li>
           </ul>
         </div>
