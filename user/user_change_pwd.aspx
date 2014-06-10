@@ -39,21 +39,21 @@
 
                <tr >
                <td height="50"  >当前密码</td>
-               <td ><asp:TextBox ID="old_pwd_text" value="" placeholder="输入当前密码" class="form-control" runat="server" ></asp:TextBox>  </td>
+               <td ><asp:TextBox type="password" ID="old_pwd_text" value="" placeholder="输入当前密码" class="form-control" runat="server" ></asp:TextBox>  </td>
                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                        ErrorMessage="请输入当前密码" ControlToValidate="old_pwd_text"></asp:RequiredFieldValidator></td>
                </tr>
 
                <tr>
                <td height="50"  >新密码</td>
-               <td><asp:TextBox ID="new_pwd_text" placeholder="输入新密码" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:TextBox type="password" ID="new_pwd_text" placeholder="输入新密码" class="form-control" runat="server" ></asp:TextBox> </td>
                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                        ErrorMessage="请输入新密码" ControlToValidate="new_pwd_text"></asp:RequiredFieldValidator></td>
                </tr>  
                
                  <tr>
                <td height="50"  >确认新密码</td>
-               <td><asp:TextBox ID="new_pwd_re_text" placeholder="确认新密码" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:TextBox type="password" ID="new_pwd_re_text" placeholder="确认新密码" class="form-control" runat="server" ></asp:TextBox> </td>
                <td><asp:CompareValidator ID="CompareValidator1" runat="server" 
                        ErrorMessage="2次输入的密码不同（" ControlToCompare="new_pwd_re_text" 
                        ControlToValidate="new_pwd_text"></asp:CompareValidator></td>
