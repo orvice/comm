@@ -37,8 +37,36 @@
          
            <form id="form1" runat="server"> 
              
-             <asp:GridView ID="GV1"   class="table table-striped"  runat="server">
+             <asp:GridView ID="GV1"   class="table table-striped"  runat="server" 
+                 DataSourceID="SqlDataSource1" AutoGenerateColumns="False" 
+                 DataKeyNames="item_id">
+                 <Columns>
+                     <asp:BoundField DataField="item_id" HeaderText="item_id" InsertVisible="False" 
+                         ReadOnly="True" SortExpression="item_id" />
+                     <asp:BoundField DataField="user_id" HeaderText="user_id" 
+                         SortExpression="user_id" />
+                     <asp:BoundField DataField="rapir_type" HeaderText="rapir_type" 
+                         SortExpression="rapir_type" />
+                     <asp:BoundField DataField="rapir_status" HeaderText="rapir_status" 
+                         SortExpression="rapir_status" />
+                     <asp:BoundField DataField="rapir_info" HeaderText="rapir_info" 
+                         SortExpression="rapir_info" />
+                     <asp:BoundField DataField="rapir_add" HeaderText="rapir_add" 
+                         SortExpression="rapir_add" />
+                 </Columns>
              </asp:GridView>
+
+            
+
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                 ConnectionString="<%$ ConnectionStrings:siteconn %>" 
+                 SelectCommand="SELECT * FROM [comm_item_log] WHERE ([user_id] = @user_id)">
+                 <SelectParameters>
+                     <asp:SessionParameter Name="user_id" SessionField="user_id" Type="Int32" />
+                 </SelectParameters>
+             </asp:SqlDataSource>
+
+            
 
            </form>           
           </div>

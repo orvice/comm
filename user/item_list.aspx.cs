@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.Common;
 
 public partial class user_item_list : System.Web.UI.Page
 {
@@ -27,10 +28,13 @@ public partial class user_item_list : System.Web.UI.Page
             Label1.Text = Session["username"].ToString();
             //Label2.Text = Session["user_fullname"].ToString();
             //Label3.Text = Session["user_id"].ToString();
+            string user_id = Session["user_id"].ToString();
+           // this.SqlDataSourcedown.SelectParameters.Clear();
+            //this.SqlDataSourcedown.SelectParameters.Add("user_id", System.TypeCode.Int32, user_id.ToString());
         }
 
-        if (!IsPostBack)
-        { gv_bind(); }
+        //if (!IsPostBack)
+        //{ gv_bind(); }
     }
 
     public void gv_bind()
