@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class user_usre_profile : System.Web.UI.Page
 {
@@ -23,5 +26,9 @@ public partial class user_usre_profile : System.Web.UI.Page
             //Label2.Text = Session["user_fullname"].ToString();
             //Label3.Text = Session["user_id"].ToString();
         }
+    }
+
+    protected void update_botton_Click(object sender, EventArgs e)
+    { 
     }
 }
