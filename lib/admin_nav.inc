@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">小区报修系统</a>
+          <a class="navbar-brand" href="#">小区报修系统-管理面板</a>
         </div>
         <div class="navbar-collapse collapse">
           
