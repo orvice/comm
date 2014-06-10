@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="#">管理中心</a></li>            
+            <li><a href="admin_panel.aspx">管理中心</a></li>            
             <li><a href="item_list.aspx">报修列表</a></li>
           </ul>
           <ul class="nav nav-sidebar">
@@ -27,7 +27,7 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">用户中心 User Center</h1>
+          <h1 class="page-header">工单列表 Tickets List</h1>
 
           <div class="row placeholders">   
               
