@@ -15,8 +15,8 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">管理中心</a></li>            
-            <li><a href="item_list.aspx">报修列表</a></li>
+            <li><a href="#">管理中心</a></li>            
+            <li class="active"><a href="item_list.aspx">报修列表</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="tk_list.aspx">工单列表</a></li>
