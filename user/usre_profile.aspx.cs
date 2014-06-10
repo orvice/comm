@@ -70,7 +70,7 @@ public partial class user_usre_profile : System.Web.UI.Page
         //打开数据库连接
         conn.Open();
 
-        string update_profile = "UPDATE  [comm_user] SET user_fullname= '" + user_fullname + "' WHERE id='" + user_id + "' ";
+        string update_profile = "UPDATE  [comm_user] SET user_fullname= '" + user_fullname + "',user_email=  '" + user_email + "',user_add=  '" + user_add + "',user_info=  '" + user_info + "' WHERE id='" + user_id + "' ";
         SqlCommand cmd_change_pwd = new SqlCommand(update_profile, conn);
         cmd_change_pwd.ExecuteNonQuery();
         //关闭数据库连接并返回结果
