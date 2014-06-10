@@ -48,7 +48,7 @@
                  
               </asp:GridView>              
           
-              <asp:SqlDataSource ID="SqlDataSource1" class="btn btn-block btn-lg btn-info" runat="server" 
+              <asp:SqlDataSource ID="SqlDataSource1"  runat="server" 
                   ConnectionString="<%$ ConnectionStrings:siteconn %>" 
                   DeleteCommand="DELETE FROM [comm_tk] WHERE [tk_id] = @tk_id" 
                   InsertCommand="INSERT INTO [comm_tk] ([tk_user_id], [tk_user_name], [tk_content]) VALUES (@tk_user_id, @tk_user_name, @tk_content)" 
