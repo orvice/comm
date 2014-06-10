@@ -62,7 +62,7 @@
 
                <tr>
                <td colspan="1" align="center">   
-               <asp:Button ID="item_submit_botton" class="btn btn-lg btn-primary" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  
+               <asp:Button ID="item_submit_botton" class="btn btn-lg btn-info" runat="server" Text="提交报修" onclick="item_submit_botton_Click"  />  
                </td> 
                </tr>               
 
