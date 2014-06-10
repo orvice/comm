@@ -33,8 +33,51 @@
               
           <form id="form1" runat="server"> 
                
-              <asp:GridView ID="GridView1" runat="server">
+              <asp:GridView ID="GridView1"  class="table table-striped" runat="server" 
+                  AutoGenerateColumns="False" DataKeyNames="item_id" 
+                  DataSourceID="SqlDataSource1">
+                  <Columns>
+                      <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                      <asp:BoundField DataField="item_id" HeaderText="item_id" InsertVisible="False" 
+                          ReadOnly="True" SortExpression="item_id" />
+                      <asp:BoundField DataField="user_id" HeaderText="user_id" 
+                          SortExpression="user_id" />
+                      <asp:BoundField DataField="rapir_type" HeaderText="rapir_type" 
+                          SortExpression="rapir_type" />
+                      <asp:BoundField DataField="rapir_status" HeaderText="rapir_status" 
+                          SortExpression="rapir_status" />
+                      <asp:BoundField DataField="rapir_info" HeaderText="rapir_info" 
+                          SortExpression="rapir_info" />
+                      <asp:BoundField DataField="rapir_add" HeaderText="rapir_add" 
+                          SortExpression="rapir_add" />
+                  </Columns>
               </asp:GridView>              
+          
+              <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                  ConnectionString="<%$ ConnectionStrings:siteconn %>" 
+                  DeleteCommand="DELETE FROM [comm_item_log] WHERE [item_id] = @item_id" 
+                  InsertCommand="INSERT INTO [comm_item_log] ([user_id], [rapir_type], [rapir_status], [rapir_info], [rapir_add]) VALUES (@user_id, @rapir_type, @rapir_status, @rapir_info, @rapir_add)" 
+                  SelectCommand="SELECT * FROM [comm_item_log]" 
+                  UpdateCommand="UPDATE [comm_item_log] SET [user_id] = @user_id, [rapir_type] = @rapir_type, [rapir_status] = @rapir_status, [rapir_info] = @rapir_info, [rapir_add] = @rapir_add WHERE [item_id] = @item_id">
+                  <DeleteParameters>
+                      <asp:Parameter Name="item_id" Type="Int32" />
+                  </DeleteParameters>
+                  <InsertParameters>
+                      <asp:Parameter Name="user_id" Type="Int32" />
+                      <asp:Parameter Name="rapir_type" Type="String" />
+                      <asp:Parameter Name="rapir_status" Type="String" />
+                      <asp:Parameter Name="rapir_info" Type="String" />
+                      <asp:Parameter Name="rapir_add" Type="String" />
+                  </InsertParameters>
+                  <UpdateParameters>
+                      <asp:Parameter Name="user_id" Type="Int32" />
+                      <asp:Parameter Name="rapir_type" Type="String" />
+                      <asp:Parameter Name="rapir_status" Type="String" />
+                      <asp:Parameter Name="rapir_info" Type="String" />
+                      <asp:Parameter Name="rapir_add" Type="String" />
+                      <asp:Parameter Name="item_id" Type="Int32" />
+                  </UpdateParameters>
+              </asp:SqlDataSource>
           
            </form> 
           </div>

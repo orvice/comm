@@ -30,10 +30,45 @@
           <h1 class="page-header">工单列表 Tickets List</h1>
 
           <div class="row placeholders">  
-           <form id="form1" runat="server">      
-              <asp:GridView ID="GridView1" runat="server">
-              </asp:GridView>
-              
+           <form id="form1" runat="server"> 
+                
+              <asp:GridView ID="GridView1" class="table table-striped" runat="server" AutoGenerateColumns="False" 
+                  DataKeyNames="tk_id" DataSourceID="SqlDataSource1"    >
+                  <Columns>
+                      <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                      <asp:BoundField DataField="tk_id" HeaderText="tk_id" InsertVisible="False" 
+                          ReadOnly="True" SortExpression="tk_id" />
+                      <asp:BoundField DataField="tk_user_id" HeaderText="tk_user_id" 
+                          SortExpression="tk_user_id" />
+                      <asp:BoundField DataField="tk_user_name" HeaderText="tk_user_name" 
+                          SortExpression="tk_user_name" />
+                      <asp:BoundField DataField="tk_content" HeaderText="tk_content" 
+                          SortExpression="tk_content" />
+                  </Columns>
+                 
+              </asp:GridView>              
+          
+              <asp:SqlDataSource ID="SqlDataSource1" class="btn btn-block btn-lg btn-info" runat="server" 
+                  ConnectionString="<%$ ConnectionStrings:siteconn %>" 
+                  DeleteCommand="DELETE FROM [comm_tk] WHERE [tk_id] = @tk_id" 
+                  InsertCommand="INSERT INTO [comm_tk] ([tk_user_id], [tk_user_name], [tk_content]) VALUES (@tk_user_id, @tk_user_name, @tk_content)" 
+                  SelectCommand="SELECT * FROM [comm_tk]" 
+                  UpdateCommand="UPDATE [comm_tk] SET [tk_user_id] = @tk_user_id, [tk_user_name] = @tk_user_name, [tk_content] = @tk_content WHERE [tk_id] = @tk_id">
+                  <DeleteParameters>
+                      <asp:Parameter Name="tk_id" Type="Int32" />
+                  </DeleteParameters>
+                  <InsertParameters>
+                      <asp:Parameter Name="tk_user_id" Type="Int32" />
+                      <asp:Parameter Name="tk_user_name" Type="String" />
+                      <asp:Parameter Name="tk_content" Type="String" />
+                  </InsertParameters>
+                  <UpdateParameters>
+                      <asp:Parameter Name="tk_user_id" Type="Int32" />
+                      <asp:Parameter Name="tk_user_name" Type="String" />
+                      <asp:Parameter Name="tk_content" Type="String" />
+                      <asp:Parameter Name="tk_id" Type="Int32" />
+                  </UpdateParameters>
+              </asp:SqlDataSource>
           
            </form> 
           </div>
