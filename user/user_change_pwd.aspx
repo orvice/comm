@@ -36,14 +36,14 @@
           <form id="form1" runat="server">            
               
            <table>
-
+              <!--
                <tr >
                <td height="50"  >当前密码</td>
                <td ><asp:TextBox type="password" ID="old_pwd_text" value="" placeholder="输入当前密码" class="form-control" runat="server" ></asp:TextBox>  </td>
                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                        ErrorMessage="请输入当前密码" ControlToValidate="old_pwd_text"></asp:RequiredFieldValidator></td>
                </tr>
-
+               -->
                <tr>
                <td height="50"  >新密码</td>
                <td><asp:TextBox type="password" ID="new_pwd_text" placeholder="输入新密码" class="form-control" runat="server" ></asp:TextBox> </td>
