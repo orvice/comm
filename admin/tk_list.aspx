@@ -29,22 +29,16 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">工单列表 Tickets List</h1>
 
-          <div class="row placeholders">   
+          <div class="row placeholders">  
+           <form id="form1" runat="server">      
+              <asp:GridView ID="GridView1" runat="server">
+              </asp:GridView>
               
-          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用管理中心，请从左侧选择需要的操作。
-            
+          
+           </form> 
           </div>
 
-          <h2 class="sub-header">管理中心 Admin Panel </h2>
-          <div class="table-responsive">
-            <div class="row demo-tiles">
-        <div class="col-xs-3">
-           
-
-        
-
-        </div>
-      </div> <!-- /tiles -->
+       
           </div>
         </div>
       </div>
