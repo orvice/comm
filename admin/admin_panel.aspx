@@ -27,7 +27,7 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">用户中心 User Center</h1>
+          <h1 class="page-header">管理中心 Admin Center</h1>
 
           <div class="row placeholders">   
               
@@ -35,7 +35,7 @@
             
           </div>
 
-          <h2 class="sub-header">管理中心 Admin Panel </h2>
+          <h2 class="sub-header">管理面板 Admin Panel </h2>
           <div class="table-responsive">
             <div class="row demo-tiles">
         <div class="col-xs-3">
