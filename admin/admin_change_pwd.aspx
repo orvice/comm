@@ -27,22 +27,48 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">用户中心 User Center</h1>
+          <h1 class="page-header">修改密码 Change Password</h1>
 
           <div class="row placeholders">   
               
-          <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 你好，欢迎使用管理中心，请从左侧选择需要的操作。
+                <form id="form1" runat="server">            
+              
+           <table>
+              <!--
+               <tr >
+               <td height="50"  >当前密码</td>
+               <td ><asp:TextBox type="password" ID="old_pwd_text" value="" placeholder="输入当前密码" class="form-control" runat="server" ></asp:TextBox>  </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                       ErrorMessage="请输入当前密码" ControlToValidate="old_pwd_text"></asp:RequiredFieldValidator></td>
+               </tr>
+               -->
+               <tr>
+               <td height="50"  >新密码</td>
+               <td><asp:TextBox type="password" ID="new_pwd_text" placeholder="输入新密码" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                       ErrorMessage="请输入新密码" ControlToValidate="new_pwd_text"></asp:RequiredFieldValidator></td>
+               </tr>  
+               
+                 <tr>
+               <td height="50"  >确认新密码</td>
+               <td><asp:TextBox type="password" ID="new_pwd_re_text" placeholder="确认新密码" class="form-control" runat="server" ></asp:TextBox> </td>
+               <td><asp:CompareValidator ID="CompareValidator1" runat="server" 
+                       ErrorMessage="2次输入的密码不同（" ControlToCompare="new_pwd_re_text" 
+                       ControlToValidate="new_pwd_text"></asp:CompareValidator></td>
+               </tr>                             
+
+               <tr>
+               <td colspan="1" align="center">   
+               <asp:Button ID="change_pwd_botton" class="btn btn-lg btn-success" runat="server" Text="修改密码" onclick="change_pwd_botton_Click"  />  
+               </td> 
+               </tr> 
+
+              </table>
+           </form>
             
           </div>
 
-          <h2 class="sub-header">管理中心 Admin Panel </h2>
-          <div class="table-responsive">
-            <div class="row demo-tiles">
-    
         
-
-        </div>
-      </div> <!-- /tiles -->
           </div>
         </div>
       </div>
